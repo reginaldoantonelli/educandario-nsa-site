@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educandário Nossa Senhora Aparecida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="imagens/logo.png" alt="Logo do Educandário NSA">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>        
+        <li><a href="historia.html">Nossa História</a></li>      
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="doacao.html" class="btn-doacao">Doar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Carrossel -->
+    <section class="carousel">
+      <div class="slides">
+        <div class="slide"><img src="Imagens/criancas 1.jpg" alt="Evento 1"></div>
+        <div class="slide"><img src="Imagens/criancas 2.jpg" alt="Evento 2"></div>
+        <div class="slide"><img src="Imagens/criancas 3.jpg" alt="Evento 3"></div>
+      </div>
+    </section>
+    <!-- Fim Carrossel -->
+
+    <h1>Bem-vindo ao Educandário Nossa Senhora Aparecida</h1>
+    <p>Texto de apresentação ou descrição do Educandário...</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Educandário NSA - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    let index = 0;
+    function showSlide(){
+      const slides = document.querySelector('.slides');
+      const total = document.querySelectorAll('.slide').length;
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+    setInterval(showSlide, 3000);
+  </script>
+</body>
+</html>
+
